@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CrystalsCollector Game</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <h1>CrystalsCollector!</h1>
+        <div id="description">
+        <p>You will be given a random number at the start of the game</p>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+        </div>
+        <br>
+        <br>
+        <h3 id="number"></h3>
+        <h3 id="wins"></h3>
+        <br>
+        <br>
+        <img src="assets/images/ruby-stone-500x500.jpg" height=100px width=100px id="ruby"/>
+        <img src="assets/images/sapphire.jpg" height=100px width=100px id="sapphire"/>
+        <img src="assets/images/yellow.jpg" height=100px width=100px id="yellow"/>
+        <img src="assets/images/lime.jpg" height=100px width=100px id="lime"/>
+        <br>
+        <div id="score"></div>
+        <br>
+        <br>
+        <div id="scorer"></div>
+    </body>
+    <script>
+        var randomnumber = Math.floor(Math.random() * 102) + 19;
+        var wins = 0;
+        var losses = 0;
+        var score = 0;
+        var ruby = Math.floor(Math.random() * 12) + 1;
+        var sapphire = Math.floor(Math.random() * 12) + 1;
+        var yellow = Math.floor(Math.random() * 12) + 1;
+        var lime = Math.floor(Math.random() * 12) + 1;
+        $("#number").html("<h2>" + randomnumber + "</h2>");
+        $("#wins").html("Wins: " + wins + "<br>" + "Losses: " + losses);
+        $("#score").text("Your total score is: ");
+        $("#scorer").text(score);
+        $("#ruby").on("click", function(){
+            score = score + ruby;
+            $("#scorer").text(score);
+            if (score === randomnumber){
+                alert("You win!");
+                wins++;
+                $("#wins").html("Wins: " + wins + "<br>" + "Losses: " + losses);
+                score = 0;
+                $("#scorer").text(score);
+                randomnumber = Math.floor(Math.random() * 102) + 19;
+                $("#number").html("<h2>" + randomnumber + "</h2>");
+                ruby = Math.floor(Math.random() * 12) + 1;
+                sapphire = Math.floor(Math.random() * 12) + 1;
+                yellow = Math.floor(Math.random() * 12) + 1;
+                lime = Math.floor(Math.random() * 12) + 1;
+            }
+            else if (score > randomnumber){
+                alert("You lose!");
+                losses++;
+                $("#wins").html("Wins: " + wins + "<br>" + "Losses: " + losses);
+                score = 0;
+                $("#scorer").text(score);
+                randomnumber = Math.floor(Math.random() * 102) + 19;
+                $("#number").html("<h2>" + randomnumber + "</h2>");
+                ruby = Math.floor(Math.random() * 12) + 1;
+                sapphire = Math.floor(Math.random() * 12) + 1;
+                yellow = Math.floor(Math.random() * 12) + 1;
+                lime = Math.floor(Math.random() * 12) + 1;
+            }
+        });
+        $("#sapphire").on("click", function(){
+            score = score + sapphire;
+            $("#scorer").text(score);
+            if (score === randomnumber){
+                alert("You win!");
+                wins++;
+                $("#wins").html("Wins: " + wins + "<br>" + "Losses: " + losses);
+                score = 0;
+                $("#scorer").text(score);
+                randomnumber = Math.floor(Math.random() * 102) + 19;
+                $("#number").html("<h2>" + randomnumber + "</h2>");
+                ruby = Math.floor(Math.random() * 12) + 1;
+                sapphire = Math.floor(Math.random() * 12) + 1;
+                yellow = Math.floor(Math.random() * 12) + 1;
+                lime = Math.floor(Math.random() * 12) + 1;
+            }
+            else if (score > randomnumber){
+                alert("You lose!");
+                losses++;
+                $("#wins").html("Wins: " + wins + "<br>" + "Losses: " + losses);
+                score = 0;
+                $("#scorer").text(score);
+                randomnumber = Math.floor(Math.random() * 102) + 19;
+                $("#number").html("<h2>" + randomnumber + "</h2>");
+                ruby = Math.floor(Math.random() * 12) + 1;
+                sapphire = Math.floor(Math.random() * 12) + 1;
+                yellow = Math.floor(Math.random() * 12) + 1;
+                lime = Math.floor(Math.random() * 12) + 1;
+            }
+        });
+        $("#yellow").on("click", function(){
+            score = score + yellow;
+            $("#scorer").text(score);
+            if (score === randomnumber){
+                alert("You win!");
+                wins++;
+                $("#wins").html("Wins: " + wins + "<br>" + "Losses: " + losses);
+                score = 0;
+                $("#scorer").text(score);
+                randomnumber = Math.floor(Math.random() * 102) + 19;
+                $("#number").html("<h2>" + randomnumber + "</h2>");
+                ruby = Math.floor(Math.random() * 12) + 1;
+                sapphire = Math.floor(Math.random() * 12) + 1;
+                yellow = Math.floor(Math.random() * 12) + 1;
+                lime = Math.floor(Math.random() * 12) + 1;
+            }
+            else if (score > randomnumber){
+                alert("You lose!");
+                losses++;
+                $("#wins").html("Wins: " + wins + "<br>" + "Losses: " + losses);
+                score = 0;
+                $("#scorer").text(score);
+                randomnumber = Math.floor(Math.random() * 102) + 19;
+                $("#number").html("<h2>" + randomnumber + "</h2>");
+                ruby = Math.floor(Math.random() * 12) + 1;
+                sapphire = Math.floor(Math.random() * 12) + 1;
+                yellow = Math.floor(Math.random() * 12) + 1;
+                lime = Math.floor(Math.random() * 12) + 1;
+            }
+        });
+        $("#lime").on("click", function(){
+            score = score + lime;
+            $("#scorer").text(score);
+            if (score === randomnumber){
+                alert("You win!");
+                wins++;
+                $("#wins").html("Wins: " + wins + "<br>" + "Losses: " + losses);
+                score = 0;
+                $("#scorer").text(score);
+                randomnumber = Math.floor(Math.random() * 102) + 19;
+                $("#number").html("<h2>" + randomnumber + "</h2>");
+                ruby = Math.floor(Math.random() * 12) + 1;
+                sapphire = Math.floor(Math.random() * 12) + 1;
+                yellow = Math.floor(Math.random() * 12) + 1;
+                lime = Math.floor(Math.random() * 12) + 1;
+            }
+            else if (score > randomnumber){
+                alert("You lose!");
+                losses++;
+                $("#wins").html("Wins: " + wins + "<br>" + "Losses: " + losses);
+                score = 0;
+                $("#scorer").text(score);
+                randomnumber = Math.floor(Math.random() * 102) + 19;
+                $("#number").html("<h2>" + randomnumber + "</h2>");
+                ruby = Math.floor(Math.random() * 12) + 1;
+                sapphire = Math.floor(Math.random() * 12) + 1;
+                yellow = Math.floor(Math.random() * 12) + 1;
+                lime = Math.floor(Math.random() * 12) + 1;
+            }
+        });
+    </script>
+</html>

@@ -1,0 +1,46 @@
+body{
+    background-image: url("../images/milky-way-starry-sky-night-sky-star-956981.jpeg")
+}
+h1{
+    background-color: orange;
+    width: 250px;
+    
+    text-align: center;
+    
+}
+div, #description{
+    background-color: orange;
+    width: 350px;
+    height: 450px;
+}
+h3, #number{
+    background-color: green;
+    
+    width: 200px;
+    height: 100px;
+    
+}
+div, #score{
+    background-color: green;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+#ruby, #sapphire, #yellow, #lime{
+    display: inline-block;
+}
+#score{
+    width: 200px;
+    height: 30px;
+}
+#scorer{
+    width: 200px;
+    height: 100px;
+    font-size: 50px;
+}
+h3, #wins{
+    background-color: yellow;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
